@@ -5,7 +5,7 @@
 #include <iostream>
 #include <string>
 
-#ifdef _MSC_VER
+#if 0
 
 #include "msg.pb.h"
 
@@ -30,7 +30,7 @@ GO_C_LIB_EXPORTS int32_t Go4CRelease_C()
 
 GO_C_LIB_EXPORTS int32_t Go4CInitCommand_C(char* data, int32_t len)
 {
-#ifdef _MSC_VER
+#if 0
     go4c_proto::CmdLogin login;
     if (login.ParseFromArray(data, len)) {
 
@@ -41,7 +41,7 @@ GO_C_LIB_EXPORTS int32_t Go4CInitCommand_C(char* data, int32_t len)
         printf("parse fail\n");
     }
 #else
-    printf("hello cmd");
+    printf("hello cmd: %s\n", data);
 #endif
     return 0;
 }
