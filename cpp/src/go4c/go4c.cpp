@@ -15,7 +15,7 @@
 
 #endif // _MSC_VER
 
-GO_C_LIB_EXPORTS int32_t Go4CInit_C(FnCallback_C callback)
+GO_C_LIB_API int32_t Go4CInit_C(FnCallback_C callback)
 {
     printf("hello world\n");
     callback("hello", 4);
@@ -23,12 +23,12 @@ GO_C_LIB_EXPORTS int32_t Go4CInit_C(FnCallback_C callback)
     return 0;
 }
 
-GO_C_LIB_EXPORTS int32_t Go4CRelease_C()
+GO_C_LIB_API int32_t Go4CRelease_C()
 {
     return 0;
 }
 
-GO_C_LIB_EXPORTS int32_t Go4CInitCommand_C(char* data, int32_t len)
+GO_C_LIB_API int32_t Go4CInitCommand_C(char* data, int32_t len)
 {
 #if 0
     go4c_proto::CmdLogin login;
