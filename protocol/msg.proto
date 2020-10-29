@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package go4c_proto;
+
+
+// CmdLogin 登录参数
+message CmdLogin {
+    string host = 1;
+    int32 port = 2;
+    string username = 3;
+    string password = 4;
+    string clientId = 5;
+
+    string userAgent = 6;
+}
