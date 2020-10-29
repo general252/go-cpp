@@ -1,8 +1,18 @@
+// g++ - fPIC - shared go4c.cpp - o libgo4c.so
+
+#ifdef _MSC_VER
+
 #ifdef GO_C_LIB_EXPORTS
 #define GO_C_LIB_EXPORTS __declspec(dllexport)
 #else
 #define GO_C_LIB_EXPORTS __declspec(dllimport)
 #endif
+
+#else
+
+#define GO_C_LIB_EXPORTS
+
+#endif // _MSC_VER
 
 
 #include <stdint.h>
